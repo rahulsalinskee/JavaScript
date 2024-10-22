@@ -36,9 +36,9 @@
     const GetVowelCount = (text) => {
         let count = 0;
         const vowels = ['a', 'e', 'i', 'o', 'u'];
-        vowels.forEach(v => {
+        vowels.forEach(vowel => {
             for (let i = 0; i <= text.length; i++) {
-                if (v === text.charAt(i).toLowerCase()) {
+                if (vowel === text.charAt(i).toLowerCase()) {
                     count++;
                 }
             }
