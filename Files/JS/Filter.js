@@ -26,7 +26,7 @@
      * @returns {number[]} An array of numbers greater than 30 from the given array of numbers.
      */
     let GetNumberGreaterThanThirty = (numbers) => {
-        return numbers.filter(number => number > 30);
+        return numbers.filter((number, index, numbers) => number > 30);
     }
 
     let numbers = [20, 22, 44, 66, 98, 30, 84, 10, 12];
