@@ -111,3 +111,91 @@
     console.dir(divBoxes);
     console.log(`Div Boxes: ${divBoxes}`);
 }
+
+/* ***** Get Attribute ***** */
+{
+    let divId = document.querySelector("div");
+    console.dir(`Div ID Query Selector (DIR): ${divId}`);
+    console.log(`Div ID Query Selector (LOG): ${divId}`);
+
+    let id = divId.getAttribute("id");
+    console.dir(`Div ID Attribute (DIR): ${id}`);
+    console.log(`Div ID Attribute (LOG): ${id}`);
+}
+
+{
+    let paragraphTag = document.querySelector("p");
+    console.dir(paragraphTag);
+    console.log(`Paragraph Tag ${paragraphTag}`);
+
+    let paragraphAttribute = paragraphTag.getAttribute("class");
+    console.log(`Paragraph Attribute: ${paragraphAttribute}`);
+}
+
+/* ***** Set Attribute ***** */
+{
+    document.querySelector(".paragraph-second").setAttribute("style", "color: red;");
+    document.querySelector(".paragraph-second").setAttribute("style", "background-color: pink;");
+    document.querySelector(".paragraph-second").setAttribute("class", "paragraph-second-updated");
+}
+
+/* ***** Insert Element: Append - Adds at the end of the node (Inside) ***** */
+{
+    let newParagraph = document.createElement("p");
+    newParagraph.innerText = "New Paragraph from Append";
+    document.querySelector("body").appendChild(newParagraph);
+
+    /* ***** Before adding, we need to create new element (Here, Button) ***** */
+    let newButton = document.createElement("button");
+
+    /* ***** Setting Inner Text For new Button element ***** */
+    newButton.innerText = "New Button from Append";
+
+    /* ***** Appending the new Button element to render on UI ***** */
+    document.querySelector(".fruit-list-div").append(newButton);
+}
+
+/* ***** Insert Element: Prepend - Adds at the Start of the node (Inside) ***** */
+{
+    /* ***** Before adding, we need to create new element (Here, Button) ***** */
+    let newButton = document.createElement("button");
+
+    /* ***** Setting Inner Text For new Button element ***** */
+    newButton.innerText = "New Button from Prepend";
+
+    /* ***** Appending the new Button element to render on UI ***** */
+    document.querySelector(".fruit-list-div").prepend(newButton);
+}
+
+/* ***** Insert Element: Before - Adds before the node (Outside) ***** */
+{
+    /* ***** Before adding, we need to create new element (Here, Button) ***** */
+    let newButton = document.createElement("button");
+
+    /* ***** Setting Inner Text For new Button element ***** */
+    newButton.innerText = "New Button from Before";
+
+    /* ***** Appending the new Button element to render on UI ***** */
+    document.querySelector(".fruit-list-div").before(newButton);
+}
+
+/* ***** Insert Element: After - Adds after the node (Outside) ***** */
+{
+    /* ***** Before adding, we need to create new element (Here, Button) ***** */
+    let newButton = document.createElement("button");
+
+    /* ***** Setting Inner Text For new Button element ***** */
+    newButton.innerText = "New Button from After";
+
+    /* ***** Appending the new Button element to render on UI ***** */
+    document.querySelector(".fruit-list-div").after(newButton);
+}
+
+/* ***** Delete Element: Remove - Remove the element ***** */
+{
+    /* ***** Before adding, we need to refer the element (Here, h5 tag whose class name is "old-heading") ***** */
+    let elementToRemove = document.querySelector(".old-heading");
+
+    /* ***** Remove the element to render on UI ***** */
+    // elementToRemove.remove();
+}

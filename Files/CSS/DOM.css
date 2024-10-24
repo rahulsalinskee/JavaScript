@@ -31,3 +31,11 @@ button {
     text-align: center;
     background-color: rosybrown;
 }
+
+.paragraph-first {
+    color: red;
+}
+
+.paragraph-second {
+    color: blue;
+}
