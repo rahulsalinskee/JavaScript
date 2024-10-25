@@ -35,5 +35,6 @@
         Solve this problem using classList
 ***** */
 {
-
+    let paragraphElement = document.querySelector("paragraph-class");
+    paragraphElement.classList.add("paragraph-class-updated");
 }
