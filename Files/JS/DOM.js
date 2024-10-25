@@ -197,5 +197,5 @@
     let elementToRemove = document.querySelector(".old-heading");
 
     /* ***** Remove the element to render on UI ***** */
-    // elementToRemove.remove();
+    elementToRemove.remove();
 }
