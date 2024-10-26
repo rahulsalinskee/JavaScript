@@ -45,3 +45,44 @@
     singleClickButton.removeEventListener("click", singleButtonClickAgainHandler);
     console.log(singleClickButton);
 }
+
+/* ***** Create a toggle button to toggle between Dark mode to light mode ***** */
+{
+    /* ***** 1st Approach ***** */
+    let changeModeButton = document.querySelector("#change-mode");
+    let currentMode = "light";
+
+    let changeModeEventHandler = function ChangeModeEvent(event) {
+        if (currentMode === "light") {
+            currentMode = "dark";
+            document.querySelector("body").style.backgroundColor = "black";
+        }
+        else {
+            currentMode = "light";
+            document.querySelector("body").style.backgroundColor = "white";
+        }
+    }
+
+    changeModeButton.addEventListener("click", changeModeEventHandler);
+}
+
+{
+    /* ***** 2nd Approach ***** */
+    let changeMode = document.querySelector("#mode-change");
+    let currentMode = "light";
+    let body = document.querySelector("body");
+
+    let changeModeEventHandler = function ChangeModeEvent (event) {
+        if (currentMode === "light") {
+            currentMode = "dark";
+            body.classList.add("dark");
+            body.classList.remove("light");
+        }
+        else {
+            currentMode = "light";
+            body.classList.add("light");
+            body.classList.remove("dark");
+        }
+    }
+    changeMode.addEventListener("click", changeModeEventHandler);
+}
