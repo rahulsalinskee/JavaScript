@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style type="text/css" src="../../CSS/NumberGuessGame/NumberGuessGame.css" />
+    <title>Number Guess Game</title>
+    <link rel="stylesheet" href="../../CSS/NumberGuessGame/NumberGuessGame.css">
 </head>
+
 <body>
-    <button className="RandomNumber" onClick="GenerateRandomNumber()">Generate Random Number</button>
+    <h1><b>Welcome!</b> This is Number Guess Game</h1>
+    <h3>Guess a number between 1 and 100</h3>
+    <input id="enterUserInput" type="text" class="input" placeholder="Enter a number" />
+    <button className="RandomNumber" onclick="ValidateEnteredNumber()">Validate Number</button>
+    <script type="text/javascript" src="../../JS/NumberGuessGame/NumberGuessGame.js"></script>
 </body>
-<script type="text/javascript" src="../../JS/NumberGuessGame/NumberGuessGame.js"></script>
+
 </html>
