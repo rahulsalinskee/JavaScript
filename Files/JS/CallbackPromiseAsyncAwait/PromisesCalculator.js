@@ -27,10 +27,10 @@
     }
 
     let userInput = () => {
-        let firstNumber = prompt("Enter First Number: ")
+        let firstNumber = prompt("Enter First Number: ")
         let inputFirstNumber = parseInt(firstNumber);
 
-        let secondNumber = prompt("Enter Second Number: ");
+        let secondNumber = prompt("Enter Second Number: ");
         let inputSecondNumber = Number.parseInt(secondNumber);
 
         return [inputFirstNumber, inputSecondNumber];
@@ -39,27 +39,27 @@
     let inputFromUser = () => {
         let [userFirstNumber, userSecondNumber] = userInput();
         let sumPromiseState = addPromise(userFirstNumber, userSecondNumber).then((value, error) => {
-            console.log("Sum = ", value);
+            console.log("Sum = ", value);
         }, (error) => {
-            console.log("Error: ", error);
+            console.log("Error: ", error);
         });
 
         let minusPromiseState = minusPromise(userFirstNumber, userSecondNumber).then((value, error) => {
-            console.log("Minus = ", value);
+            console.log("Minus = ", value);
         }, (error) => {
-            console.log("Error: ", error);
+            console.log("Error: ", error);
         });
 
         let multiplyPromiseState = multiplyPromise(userFirstNumber, userSecondNumber).then((value, error) => {
-            console.log("Multiply = ", value);
+            console.log("Multiply = ", value);
         }, (error) => {
-            console.log("Error: ", error);
+            console.log("Error: ", error);
         });
 
         // These will return Promise state for all the three promises: Pending or Fulfilled
-        console.log("1. ", sumPromiseState);
-        console.log("2. ", minusPromiseState);
-        console.log("3. ", multiplyPromiseState);
+        console.log("1. ", sumPromiseState);
+        console.log("2. ", minusPromiseState);
+        console.log("3. ", multiplyPromiseState);
     }
 
     let sum = (firstNumber, secondNumber) => {
