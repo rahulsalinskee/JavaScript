@@ -6,6 +6,8 @@
     console.log(`Tag Name: ${headingTagOneValue.tagName}`);
 }
 
+/* ---------------------------------------------------------------------------------- */
+
 /* ***** DOM - Selecting With Class ***** */
 {
     let headingTagTwoValue = document.getElementsByClassName("headingTagTwo");
@@ -14,6 +16,8 @@
     console.log(`Tag Name: ${headingTagTwoValue[0].tagName}`);
     console.log(`Tag Name: ${headingTagTwoValue[1].tagName}`);
 }
+
+/* ---------------------------------------------------------------------------------- */
 
 /* ***** DOM - Selecting With Tag ***** */
 {
@@ -24,6 +28,8 @@
     console.log(`Tag Name: ${paragraphTag[1].tagName}`);
 }
 
+/* ---------------------------------------------------------------------------------- */
+
 /* ***** DOM - Query Selector For Tag ***** */
 {
     /* ***** DOM - Query Selector - It will return first element ***** */
@@ -32,6 +38,8 @@
     console.log(`First Button Element using Query Selector: ${firstButtonElement}`);
     console.log(`Tag Name: ${firstButtonElement.tagName}`);
 }
+
+/* ---------------------------------------------------------------------------------- */
 
 /* ***** DOM - Query Selector All For Tag ***** */
 {
@@ -43,6 +51,8 @@
     console.log(`Tag Name: ${allParagraphElements[1].tagName}`);
 }
 
+/* ---------------------------------------------------------------------------------- */
+
 /* ***** DOM - Query Selector For Class ***** */
 {
     /* ***** DOM - Query Selector - It will return first element ***** */
@@ -51,6 +61,8 @@
     console.log(`First Button Element using Query Selector class: ${firstButtonElement}`);
     console.log(`Tag Name: ${firstButtonElement.tagName}`);
 }
+
+/* ---------------------------------------------------------------------------------- */
 
 /* ***** DOM - Query Selector All For Class ***** */
 {
@@ -62,6 +74,8 @@
     console.log(`Tag Name: ${allParagraphElements[1].tagName}`);
 }
 
+/* ---------------------------------------------------------------------------------- */
+
 /* ***** DOM - Query Selector For ID ***** */
 {
     /* ***** DOM - Query Selector - It will return element by ID ***** */
@@ -71,12 +85,16 @@
     console.log(`Tag Name: ${headingTagElement.tagName}`);
 }
 
+/* ---------------------------------------------------------------------------------- */
+
 /* ***** DOM - Query Selector With Children ***** */
 {
     let divChildren = document.querySelector("div").children;
     console.dir(divChildren);
     console.log(`Children of div: ${divChildren}`);
 }
+
+/* ---------------------------------------------------------------------------------- */
 
 /* ***** DOM - Query Selector With Inner HTML | Inner Text | Text Content ***** */
 {
@@ -87,11 +105,15 @@
     console.log(`Fruits Name (Text Content): ${fruitsNameDiv.textContent}`);
 }
 
+/* ---------------------------------------------------------------------------------- */
+
 /* ***** DOM - Query Selector With Inner HTML To Change the content ***** */
 {
     let setNewHeading = document.querySelector("h5").innerHTML = "<b>New Heading!</b>";
     console.log(`New Heading: ${setNewHeading}`);
 }
+
+/* ---------------------------------------------------------------------------------- */
 
 /* ***** DOM - Query Selector With Inner Text To Concat the content ***** */
 {
@@ -99,6 +121,8 @@
     tagValue = tagValue.innerText + " Learning is Fun!";
     console.log(`Updated Tag Name: ${tagValue}`);
 }
+
+/* ---------------------------------------------------------------------------------- */
 
 /* ***** DOM - Query Selector With Inner Text To Get and Set the updated content ***** */
 {
@@ -112,6 +136,8 @@
     console.log(`Div Boxes: ${divBoxes}`);
 }
 
+/* ---------------------------------------------------------------------------------- */
+
 /* ***** Get Attribute ***** */
 {
     let divId = document.querySelector("div");
@@ -123,6 +149,8 @@
     console.log(`Div ID Attribute (LOG): ${id}`);
 }
 
+/* ---------------------------------------------------------------------------------- */
+
 {
     let paragraphTag = document.querySelector("p");
     console.dir(paragraphTag);
@@ -132,12 +160,16 @@
     console.log(`Paragraph Attribute: ${paragraphAttribute}`);
 }
 
+/* ---------------------------------------------------------------------------------- */
+
 /* ***** Set Attribute ***** */
 {
     document.querySelector(".paragraph-second").setAttribute("style", "color: red;");
     document.querySelector(".paragraph-second").setAttribute("style", "background-color: pink;");
     document.querySelector(".paragraph-second").setAttribute("class", "paragraph-second-updated");
 }
+
+/* ---------------------------------------------------------------------------------- */
 
 /* ***** Insert Element: Append - Adds at the end of the node (Inside) ***** */
 {
@@ -155,6 +187,8 @@
     document.querySelector(".fruit-list-div").append(newButton);
 }
 
+/* ---------------------------------------------------------------------------------- */
+
 /* ***** Insert Element: Prepend - Adds at the Start of the node (Inside) ***** */
 {
     /* ***** Before adding, we need to create new element (Here, Button) ***** */
@@ -166,6 +200,8 @@
     /* ***** Appending the new Button element to render on UI ***** */
     document.querySelector(".fruit-list-div").prepend(newButton);
 }
+
+/* ---------------------------------------------------------------------------------- */
 
 /* ***** Insert Element: Before - Adds before the node (Outside) ***** */
 {
@@ -179,6 +215,8 @@
     document.querySelector(".fruit-list-div").before(newButton);
 }
 
+/* ---------------------------------------------------------------------------------- */
+
 /* ***** Insert Element: After - Adds after the node (Outside) ***** */
 {
     /* ***** Before adding, we need to create new element (Here, Button) ***** */
@@ -190,6 +228,8 @@
     /* ***** Appending the new Button element to render on UI ***** */
     document.querySelector(".fruit-list-div").after(newButton);
 }
+
+/* ---------------------------------------------------------------------------------- */
 
 /* ***** Delete Element: Remove - Remove the element ***** */
 {
