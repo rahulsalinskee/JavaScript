@@ -46,31 +46,42 @@
             amount.value = 1;
         }
 
-        const URL = `${BASE_URL}to=${toCurrency.value.toLowerCase()}&from=${fromCurrency.value.toLowerCase()}&amount=${amountValue}`;
-        let response = await fetch(URL, ApiRequestOption());
-        let data = await response.json();
-        console.log(data);
-        let currentExchangeRate = data.result;
-        let finalAmount = currentExchangeRate * amountValue;
-        RenderCurrentExchangeRate(fromCurrency.value, toCurrency.value, currentExchangeRate);
-        RenderConvertedAmount(amountValue, fromCurrency.value, finalAmount, toCurrency.value, currentExchangeRate);
+        try {
+            const URL = `${BASE_URL}to=${toCurrency.value.toLowerCase()}&from=${fromCurrency.value.toLowerCase()}&amount=${amountValue}`;
+            let response = await fetch(URL, ApiRequestOption());
+            var data = await response.json();
+            let currentExchangeRate = data.info.rate;
+            let finalAmount = currentExchangeRate * amountValue;
+            RenderCurrentExchangeRate(fromCurrency.value, toCurrency.value, currentExchangeRate);
+            RenderConvertedAmount(amountValue, fromCurrency.value, finalAmount, toCurrency.value, currentExchangeRate);
+        }
+        catch (error) {
+            console.log(error);
+        }
     }
 
     function ApiRequestOption() {
-        var myHeaders = new Headers();
-        myHeaders.append("apikey", "Oimeh4o27w9P3wz2KHMLljN5HNk3yjhX");
-        var requestOptions = {
-            method: 'GET',
-            redirect: 'follow',
-            headers: myHeaders
-        };
+        let requestOptions = "";
+        try {
+            var myHeaders = new Headers();
+            myHeaders.append("apikey", "Oimeh4o27w9P3wz2KHMLljN5HNk3yjhX");
+            requestOptions = {
+                method: 'GET',
+                redirect: 'follow',
+                headers: myHeaders
+            };
+            return requestOptions;
+        }
+        catch (error) {
+            requestOptions = `${error}`;
+        }
         return requestOptions;
     }
 
     function RenderConvertedAmount(amountValue, fromCurrencies, finalAmount, toCurrency) {
         displayFinalAmount.innerText = `${amountValue} ${fromCurrencies} = ${finalAmount} ${toCurrency}`;
     }
-    
+
     function RenderCurrentExchangeRate(fromCurrencies, toCurrency, currentExchangeRate) {
         currentExchangeRateElement.innerText = `1 ${fromCurrencies} = ${currentExchangeRate} ${toCurrency}`;
     }
