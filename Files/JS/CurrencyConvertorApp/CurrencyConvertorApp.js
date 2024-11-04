@@ -79,10 +79,10 @@
     }
 
     function RenderConvertedAmount(amountValue, fromCurrencies, finalAmount, toCurrency) {
-        displayFinalAmount.innerText = `${amountValue} ${fromCurrencies} = ${finalAmount} ${toCurrency}`;
+        displayFinalAmount.innerText = `Converted Amount: ${amountValue} ${fromCurrencies} = ${finalAmount} ${toCurrency}`;
     }
 
     function RenderCurrentExchangeRate(fromCurrencies, toCurrency, currentExchangeRate) {
-        currentExchangeRateElement.innerText = `1 ${fromCurrencies} = ${currentExchangeRate} ${toCurrency}`;
+        currentExchangeRateElement.innerText = `Current Exchange Rate: 1 ${fromCurrencies} = ${currentExchangeRate} ${toCurrency}`;
     }
 }
